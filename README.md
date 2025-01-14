@@ -40,17 +40,17 @@ CREATE OR REPLACE DATABASE SIMPLE_ML_DB;
 USE SCHEMA SIMPLE_ML_DB.PUBLIC;
 
 -- Create the integration with Github
-CREATE OR REPLACE API INTEGRATION GITHUB_INTEGRATION_SIMPLE_ML_DEMO
+CREATE OR REPLACE API INTEGRATION GITHUB_INTEGRATION_SFC_GH_FGAMPFER
     api_provider = git_https_api
-    api_allowed_prefixes = ('https://github.com/michaelgorkow/')
+    api_allowed_prefixes = ('https://github.com/sfc-gh-fgampfer/')
     enabled = true
-    comment='Michaels repository containing all the awesome code.';
+    comment='Fabians repository containing all the awesome code.';
 
 -- Create the integration with the Github repository
 CREATE GIT REPOSITORY GITHUB_REPO_SIMPLE_ML_DEMO 
-	ORIGIN = 'https://github.com/michaelgorkow/snowflake_simple_ml' 
+	ORIGIN = 'https://github.com/sfc-gh-fgampfer/snowflake_simple_ml' 
 	API_INTEGRATION = 'GITHUB_INTEGRATION_SIMPLE_ML_DEMO' 
-	COMMENT = 'Michaels repository containing all the awesome code.';
+	COMMENT = 'Fabians repository containing all the awesome code.';
 
 -- Fetch most recent files from Github repository
 ALTER GIT REPOSITORY GITHUB_REPO_SIMPLE_ML_DEMO FETCH;
