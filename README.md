@@ -49,7 +49,7 @@ CREATE OR REPLACE API INTEGRATION GITHUB_INTEGRATION_SFC_GH_FGAMPFER
 -- Create the integration with the Github repository
 CREATE GIT REPOSITORY GITHUB_REPO_SIMPLE_ML_DEMO 
 	ORIGIN = 'https://github.com/sfc-gh-fgampfer/snowflake_simple_ml' 
-	API_INTEGRATION = 'GITHUB_INTEGRATION_SIMPLE_ML_DEMO' 
+	API_INTEGRATION = 'GITHUB_INTEGRATION_SFC_GH_FGAMPFER' 
 	COMMENT = 'Fabians repository containing all the awesome code.';
 
 -- Fetch most recent files from Github repository
