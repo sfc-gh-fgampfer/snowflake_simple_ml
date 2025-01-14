@@ -73,5 +73,5 @@ def generate_sql_email_message(data: str, file: str):
     
     sql = f"""CALL SYSTEM$SEND_SNOWFLAKE_NOTIFICATION(
                 SNOWFLAKE.NOTIFICATION.TEXT_HTML('{email_content}'),
-                SNOWFLAKE.NOTIFICATION.EMAIL_INTEGRATION_CONFIG('my_email_int','Drift Detection Report ❄️ {current_timestamp}',ARRAY_CONSTRUCT('michael.gorkow@snowflake.com')))"""
+                SNOWFLAKE.NOTIFICATION.EMAIL_INTEGRATION_CONFIG('my_email_int','Drift Detection Report ❄️ {current_timestamp}',ARRAY_CONSTRUCT('fabian.gampfer@snowflake.com')))"""
     return sql
